@@ -40,3 +40,24 @@ paths:
                     type: string
                   ask1Qty:
                     type: string
+  /market-scan:
+    get:
+      summary: Get a list of symbols with 24h trading volume over $10 million
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    symbol:
+                      type: string
+                    lastPrice:
+                      type: string
+                    turnover24h:
+                      type: string
+                    price24hPcnt:
+                      type: string
