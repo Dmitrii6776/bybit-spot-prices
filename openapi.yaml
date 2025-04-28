@@ -1,0 +1,26 @@
+openapi: 3.0.1
+info:
+  title: Bybit Spot Price API
+  version: "1.0"
+paths:
+  /price/{symbol}:
+    get:
+      summary: Get spot price for a crypto symbol
+      parameters:
+        - name: symbol
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  symbol:
+                    type: string
+                  price:
+                    type: string

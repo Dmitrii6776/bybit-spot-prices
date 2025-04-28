@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Bybit Spot Prices",
+  "name_for_model": "bybit_spot_prices",
+  "description_for_human": "Get real-time Bybit spot market prices.",
+  "description_for_model": "Fetch live spot prices of cryptocurrencies from Bybit.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://your-replit-URL/openapi.yaml"
+  },
+  "logo_url": "https://your-replit-URL/logo.png",
+  "contact_email": "your@email.com",
+  "legal_info_url": "https://your-replit-URL/legal"
+}
