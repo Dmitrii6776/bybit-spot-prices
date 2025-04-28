@@ -1,11 +1,11 @@
 openapi: 3.0.1
 info:
   title: Bybit Spot Price API
-  version: "1.0"
+  version: '1.0'
 paths:
   /price/{symbol}:
     get:
-      summary: Get spot price for a crypto symbol
+      summary: Get full spot trading data for a crypto symbol
       parameters:
         - name: symbol
           in: path
@@ -13,7 +13,7 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Successful response
           content:
             application/json:
@@ -22,5 +22,21 @@ paths:
                 properties:
                   symbol:
                     type: string
-                  price:
+                  lastPrice:
+                    type: string
+                  highPrice24h:
+                    type: string
+                  lowPrice24h:
+                    type: string
+                  turnover24h:
+                    type: string
+                  price24hPcnt:
+                    type: string
+                  bid1Price:
+                    type: string
+                  ask1Price:
+                    type: string
+                  bid1Qty:
+                    type: string
+                  ask1Qty:
                     type: string
