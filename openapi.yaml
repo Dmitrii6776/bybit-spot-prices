@@ -1,11 +1,13 @@
 openapi: 3.0.1
 info:
   title: Bybit Spot Price API
-  version: '1.0'
+  version: "1.0"
+servers:
+  - url: https://bybit-spot-prices-production.up.railway.app
 paths:
   /price/{symbol}:
     get:
-      summary: Get full spot trading data for a crypto symbol
+      summary: Get spot price for a crypto symbol
       parameters:
         - name: symbol
           in: path
@@ -13,7 +15,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json:
@@ -44,7 +46,7 @@ paths:
     get:
       summary: Get a list of symbols with 24h trading volume over $10 million
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json:
