@@ -9,9 +9,9 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://your-replit-URL/openapi.yaml"
+    "url": "https://bybit-spot-prices-production.up.railway.app/openapi.yaml"
   },
-  "logo_url": "https://your-replit-URL/logo.png",
-  "contact_email": "your@email.com",
-  "legal_info_url": "https://your-replit-URL/legal"
+  "logo_url": "https://bybit-spot-prices-production.up.railway.app/logo.png",
+  "contact_email": "prototype6777@gmail.com",
+  "legal_info_url": "https://bybit-spot-prices-production.up.railway.app/legal"
 }
