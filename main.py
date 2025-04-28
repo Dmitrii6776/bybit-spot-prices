@@ -30,6 +30,6 @@ def serve_openapi_spec():
 def serve_logo():
     return FileResponse("logo.png", media_type='image/png')
 
-@app.get("/legal")
+@app.get("/legal.html")
 def serve_legal():
     return FileResponse("legal.html", media_type='text/html')
