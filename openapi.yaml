@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.1.0
 info:
   title: Bybit Spot Price API
   version: "1.0"
@@ -7,7 +7,8 @@ servers:
 paths:
   /price/{symbol}:
     get:
-      summary: Get spot price for a crypto symbol
+      operationId: getSpotPrice
+      summary: Get full spot trading data for a crypto symbol
       parameters:
         - name: symbol
           in: path
@@ -44,6 +45,7 @@ paths:
                     type: string
   /market-scan:
     get:
+      operationId: marketScanner
       summary: Get a list of symbols with 24h trading volume over $10 million
       responses:
         "200":
