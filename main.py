@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 import requests
 import os
+import uvicorn
 
 app = FastAPI()
 
@@ -30,6 +31,10 @@ def serve_openapi_spec():
 def serve_logo():
     return FileResponse("logo.png", media_type='image/png')
 
-@app.get("/legal.html")
+@app.get("/legal")
 def serve_legal():
     return FileResponse("legal.html", media_type='text/html')
+
+# 🛠 ADD THIS at the bottom:
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
