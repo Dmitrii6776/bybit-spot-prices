@@ -2,10 +2,13 @@ from fastapi import FastAPI
 import requests
 import uvicorn
 
+
+app = FastAPI()
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
-app = FastAPI()
+
 
 # Bybit API Key (PUBLIC, no secret needed for market data)
 API_KEY = "2Afh93tlwzcQgnxHY"
